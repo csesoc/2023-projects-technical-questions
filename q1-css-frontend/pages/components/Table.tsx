@@ -37,12 +37,14 @@ export default function Table({ contents }: TableProps) {
             {content.alertText}
           </div>
           <div className={styles.item}>
+            {/*DELETE*/}
             {content.alertOccurence.map((alertOccurance) => (
-              <div className={styles.eventOccurance}>
-                <div className={styles.anomaly}>{alertOccurance.anomaly}</div>
-                <div className={styles.date}>{alertOccurance.date}</div>
+              <div className={styles.eventOccurance}> {/*DELETE THE CSS*/}
+                <div className={styles.anomaly}>{alertOccurance.anomaly}</div> {/*DELETE THE CSS*/}
+                <div className={styles.date}>{alertOccurance.date}</div> {/*DELETE THE CSS*/}
               </div>
             ))}
+            {/*DELETE*/}
           </div>
         </div>
       ))}

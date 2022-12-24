@@ -37,6 +37,11 @@ export default function Home() {
               alertType: 'shelter',
               alertText: 'terrible :(',
               alertOccurence: [{anomaly: 'slept on cold ground', date: '11/11/2022'}, {anomaly: 'slept on hard concrete', date: '13/11/2022'}]
+            },
+            {
+              alertType: 'Done!',
+              alertText: '<YOUR NAME>',
+              alertOccurence: []
             }
           ]
         }} />
