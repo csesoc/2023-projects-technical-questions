@@ -17,18 +17,3 @@
     flex: 1 1 0px;
     flex-direction: column;
 }
-
-.eventOccurance {
-    display: flex;
-    flex-grow: 1;
-}
-
-.anomaly {
-    flex-grow: 1;
-}
-
-.date {
-    color: blue;
-    font-size: x-small;
-    align-self: flex-end;
-}
