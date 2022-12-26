@@ -13,37 +13,37 @@ Since Rick is inexperienced in working in legacy languages like `Typescript` and
 The program had some mechanism for creating and adding new entities to the system, these entities can either be a super space cowboy or a space animal. The program exposed a **single HTTP POST endpoint** for creating entities. The endpoint took a JSON request body of the form:
 ```json
 {
-    entities: [
+    "entities": [
         {
-            type: "space_cowboy",
-            metadata: {
-                name: "Jim",
-                lassoSize: 1 
+            "type": "space_cowboy",
+            "metadata": {
+                "name": "Jim",
+                "lassoSize": 1 
             },
-            location: {
-                x: 3,
-                y: 2
+            "location": {
+                "x": 3,
+                "y": 2
             }
         },
         {
-            type: "space_cowboy",
-            metadata: {
-                name: "Bob",
-                lassoSize: 2 
+            "type": "space_cowboy",
+            "metadata": {
+                "name": "Bob",
+                "lassoSize": 2 
             },
-            location: {
-                x: 7,
-                y: 3
+            "location": {
+                "x": 7,
+                "y": 3
             }
         },
         {
-            type: "space_animal",
-            metadata: {
-                type: "flying_burger",
+            "type": "space_animal",
+            "metadata": {
+                "type": "flying_burger",
             },
-            location: {
-                x: 7,
-                y: 3
+            "location": {
+                "x": 7,
+                "y": 3
             }
         }
     ]
@@ -52,14 +52,14 @@ The program had some mechanism for creating and adding new entities to the syste
 The request body is a list of entities to add to the system (note this endpoint can be called multiple times). Entities consist of some type discriminator (the type field), some metadata about the entity (the metadata field) and their location. 
 
 Super space cowboy metadata takes the form:
-```json
+```ts
 { 
     name: string, 
     lassoSize: number 
 }
 ```
 while space animal metadata takes the form:
-```json
+```ts
 { 
     type: "pig" | "cow" | "flying_burger" 
 }
@@ -91,25 +91,25 @@ The second part of the program is the ability to query which space animals a cer
 An animal is lassoable if their distance from the cowboy in question is **less than or equal to the length of the cowboy's lasso**. The endpoint input looks something like:
 ```json
 {
-    cowboy_name: "rick" 
+    "cowboy_name": "rick" 
 }
 ```
 Unfortunately unlike the first part the type definition for the input/output model of this endpoint was corrupted so it is up to you to add that to the program. After processing the request your endpoint should return `HTTP 200` with a **list of ALL space animals** it can capture, the output should follow the following example format
 ```json
 {
-    space_animals: [
+    "space_animals": [
         {
-            type: "pig",
-            location: {
-                x: 3,
-                y: 3
+            "type": "pig",
+            "location": {
+                "x": 3,
+                "y": 3
             } 
         },
         {
-            type: "flying_burger",
-            location: {
-                x: 3,
-                y: 6
+            "type": "flying_burger",
+            "location": {
+                "x": 3,
+                "y": 6
             } 
         }
     ]
