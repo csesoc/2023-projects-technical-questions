@@ -5,6 +5,7 @@
     font-family: arial, sans-serif;
     width: 100%;
 }
+
 .row {
     display: flex;
     border: 1px solid #dddddd;

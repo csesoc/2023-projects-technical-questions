@@ -1,5 +1,5 @@
-# Who would be interested?
-Any frontend-related project would be interested in this eg circles, notangles, websites, UI/UX etc. Do this question if you would like to work on frontend code.
+> This question is relevant for **any project with a frontend** (Chaos, Circles,
+> CSElectives, Freerooms, Jobsboard, Notangles, Structs.sh, Website).
 
 # Question
 There is a table rendered in pages/index.tsx and this table is controlled by components/Table.tsx.
@@ -8,25 +8,25 @@ This table contains a couple of alerts, and is structured using flexboxes. Have 
 
 ```
 {
-          columnTitles: ['Alert', 'Issue', 'Occurences'],
-          rowContents: [
-            {
-              alertType: 'food',
-              alertText: 'good!',
-              alertOccurence: []
-            },
-            {
-              alertType: 'water',
-              alertText: 'low',
-              alertOccurence: [{anomaly: 'dropped to 10% below normal', date: '11/11/2022'}]
-            },
-            {
-              alertType: 'shelter',
-              alertText: 'terrible :(',
-              alertOccurence: [{anomaly: 'slept on cold ground', date: '11/11/2022'}, {anomaly: 'slept on hard concrete', date: '13/11/2022'}]
-            }
-          ]
-        }
+  columnTitles: ['Alert', 'Issue', 'Occurences'],
+  rowContents: [
+    {
+      alertType: 'food',
+      alertText: 'good!',
+      alertOccurence: []
+    },
+    {
+      alertType: 'water',
+      alertText: 'low',
+      alertOccurence: [{anomaly: 'dropped to 10% below normal', date: '11/11/2022'}]
+    },
+    {
+      alertType: 'shelter',
+      alertText: 'terrible :(',
+      alertOccurence: [{anomaly: 'slept on cold ground', date: '11/11/2022'}, {anomaly: 'slept on hard concrete', date: '13/11/2022'}]
+    }
+  ]
+}
 ```
 The interesting problem here is that an alert can occur in multiple occurances. These should be displayed under the same alert. Our coder friend got pretty close to rendering this table using flexboxes, but doesn't know how to handle the multiple occurances dillema. So, they abandoned the project. Unfortunately, he was actually only ~5 lines of code and 10 lines of CSS away from a working solution! Show off to our coder friend by rendering something like the following:
 ![Solution](solution.png)

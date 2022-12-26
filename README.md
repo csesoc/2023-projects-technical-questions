@@ -1,15 +1,29 @@
-# 2023-projects-technical-questions
+# 2023 Projects Recruitment Technical Questions
 
-This repo contains all the questions you can elect to do.
+Welcome, and thank you for applying to one of CSESoc Development's flagship projects!
+This repository contains all questions for our technical screening.
 
+**YOU DO NOT NEED TO ATTEMPT ALL QUESTIONS!**
 
-DO NOT ATTEMPT ALL QUESTIONS!!!!!!!!!!
+There are two baseline questions, one for **frontend** and one for **backend**. Some projects
+may also have their own questions, because their tech stack requires specific knowledge
+(e.g. the backend for Chaos is written in Rust).
 
+**We do not expect applicants to do all questions.** Please choose questions that you
+feel would best reflect the projects you want to join (i.e. if you want to work on
+frontend, do the frontend question). At the top of each technical question, there
+will be a section that details which projects the question is relevant for.
 
-This repo collects a bunch of questions, and you should select the questions which best show your strengths. Try to think about which projects you would be interested in, and pick questions relevant to what you want to do in that project (Eg BE, FE, React, state management, etc). We will label the questions with which projects are related to each question.
+## Setting up
 
-We also expect you to have installed Node, which you need to run javascript code. To install it, you should:
-1. install NVM: https://github.com/nvm-sh/nvm
-2. Reload your shell using `exec $SHELL`,
-3. run `nvm install --lts` to get the latest version of node.
-You should check this worked by running `node -v` which should get you your node version number (probably 16.x.x).
+Some questions will need setup before they can run properly. This should be written
+in the `README.md` of each question. If you have any questions, feel free to contact:
+
+- `development@csesoc.org.au` via email
+- Hanyuan (hanyuone#0001) or Angella (Angella#2408) on Discord
+
+## Submitting
+
+> TODO once I figure out what `solutions` branch is for
+
+**Good luck, and happy coding!**
