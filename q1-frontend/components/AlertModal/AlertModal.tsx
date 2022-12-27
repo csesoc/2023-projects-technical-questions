@@ -2,7 +2,7 @@ import { SetStateAction, Dispatch, FormEvent } from "react";
 import { TableContents } from "../Table/Table";
 
 interface AlertModalProps {
-  useContents: Dispatch<SetStateAction<TableContents>>  ,
+  useContents: Dispatch<SetStateAction<TableContents>>,
 }
 
 export default function AlertModal({useContents}: AlertModalProps) {
@@ -13,7 +13,7 @@ export default function AlertModal({useContents}: AlertModalProps) {
   }
   return (
     <form data-testid='form' onSubmit={onSubmitEvent}>
-      <label> Add new Alert: </label>
+      <label> Add new alert: </label>
       <input type='text' id='alert' name='alert' />
       <button type='submit'> Add </button>
     </form>

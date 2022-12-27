@@ -51,22 +51,22 @@ can see a copy of the object below in `components/Table.tsx`):
     }
   ]
 }
+```
 
 The last projects director left one final task - the updates aren't displaying
 properly in the table when the webapp is launched:
+
 ![](images/current.png)
 
-```
-This is how that table should look:
-![Solution](images/solution.png)
-A few interesting features here include that there can be multiple occurances to the same alert, and that the text for the date is styled and off to the edge of the table.
+Your task for this part is to **display the updates for each alert using CSS**,
+such that updates appear for each alert, similar to the image below:
 
-## Part 1
-Fill in the "occurances" column to render like in the screenshot. 
+![](images/solution.png)
+
 Some traits to note about the solution:
 - There are multiple updates in each row.
-- To the right of each update is the date that update was entered (the `date` field), in a smaller font and a different colour.
-
+- To the right of each update is the date that update was entered (the `date` field),
+  in a smaller font and a different colour.
 
 You must:
 - Add updates to the table (`components/Table.tsx`), styled using CSS and flexboxes,
@@ -78,16 +78,19 @@ You must:
 - Fill in the field containing `<YOUR NAME>` to your GitHub username.
 
 Once you have completed this, take a screenshot of your table and put it in `images/submission.png`
-(other image formats allowed).
+(other image formats are also allowed).
 
 ## Part 2
 
 > Skills: JavaScript, React
 
-EXTENSION: modify the table to to add a way of adding a new alert, with no occurances. A stub component has been made called "AlertModal" which will render a modal when clicked, but does nothing with it. You should modify AlertModal to add a new occurance when filled.
-
+EXTENSION: modify the table to to add a way of adding a new alert, with no updates.
+A stub component has been made called "AlertModal" which will render a modal when
+clicked, but does nothing with it. You should modify AlertModal to add a new update
+when filled.
 
 # Getting set up
+
 1.  you will need to install node/npm. This is best done using [nvm](https://github.com/nvm-sh/nvm). Run the bash script specified in the README of that repo to download nvm then use the command `nvm install --lts` to install the latest stable versions of npm/node. Run `node -v` to check success. The response should be something like 16.x.x or 18.x.x
 2. run `npm install` to fetch dependencies.
 

@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-key */
 
-import { useState } from 'react';
-import AlertModal from '../AlertModal';
-import styles from './Table.module.css';
+import { useState } from "react";
+import AlertModal from "../AlertModal";
+import styles from "./Table.module.css";
+
 // !!!!!!!!!!!!!!!!!!!!
 // TODO is at line 68 !
 // !!!!!!!!!!!!!!!!!!!!
 
-interface AlertOccurrance {
+interface AlertUpdate {
   date: string,
   update: string
 }
@@ -15,7 +16,7 @@ interface AlertOccurrance {
 interface Alert {
   alert: string,
   status: string,
-  updates: AlertOccurrance[]
+  updates: AlertUpdate[]
 }
 
 export interface TableContents {
@@ -25,7 +26,7 @@ export interface TableContents {
 
 export default function Table() {
   const [contents, useContents] = useState<TableContents>({
-    columnTitles: ['Alert', 'Issue', 'Occurences'],
+    columnTitles: ['Alert', 'Status', 'Updates'],
     rowContents: [
       {
         alert: 'food',
@@ -48,7 +49,8 @@ export default function Table() {
         updates: []
       }
     ]
-  })
+  });
+
   return (
     <>
       <AlertModal useContents={useContents}/>
@@ -65,7 +67,7 @@ export default function Table() {
               {content.status}
             </div>
             <div className={styles.item}>
-              {/*TODO: add occurances*/}
+              {/* TODO: add updates */}
             </div>
           </div>
         ))}
