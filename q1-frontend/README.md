@@ -2,43 +2,89 @@
 > CSElectives, Freerooms, Jobsboard, Notangles, Structs.sh, Website).
 
 # Question
-There is a table rendered in pages/index.tsx and this table is controlled by components/Table.tsx.
 
-This table contains a couple of alerts, and is structured using flexboxes. Have a look at an example of the data it is trying to render:
+> **YOU DO NOT NEED TO COMPLETE ALL PARTS.** Complete the parts that you think best
+> reflect your skills.
+
+The year is 2077. The world is in disrepair, nuclear war has ravaged the planet,
+climate change has made the average temperature 50 degrees, all the natural resources
+have depleted. Somehow, someway, CSESoc has survived, and Development has holed itself
+up in a nuclear bunker.
+
+Supplies are limited, and so as budding computer scientists, software engineers and
+bioinformaticists, Development has decided to release a new project - an **alert system**.
+
+The project director for this alert system has almost got the frontend figured out,
+but he tragically suffered from a lack of Vitamin C++ and perished. Do you have what
+it takes to finish the alert system?
+
+## Part 1
+
+> Skills: CSS
+
+The alert system is used by CSESoc Dev to see the status of each of the bunker's vitals.
+The system displays **alerts** for vital resources such as food, water and shelter, and
+each alert has a **status** (a string) and any number of **updates** (a string and the
+date the update was filed).
+
+The data is represented as a JavaScript object, and it looks something like this (you
+can see a copy of the object below in `components/Table.tsx`):
 
 ```
 {
-  columnTitles: ['Alert', 'Issue', 'Occurences'],
+  columnTitles: ['Alert', 'Status', 'Updates'],
   rowContents: [
     {
-      alertType: 'food',
-      alertText: 'good!',
-      alertOccurence: []
+      alert: 'food',
+      status: 'good!',
+      updates: []
     },
     {
-      alertType: 'water',
-      alertText: 'low',
-      alertOccurence: [{anomaly: 'dropped to 10% below normal', date: '11/11/2022'}]
+      alert: 'water',
+      status: 'low',
+      updates: [{update: 'dropped to 10% below normal', date: '11/11/2022'}]
     },
     {
-      alertType: 'shelter',
-      alertText: 'terrible :(',
-      alertOccurence: [{anomaly: 'slept on cold ground', date: '11/11/2022'}, {anomaly: 'slept on hard concrete', date: '13/11/2022'}]
+      alert: 'shelter',
+      status: 'terrible :(',
+      updates: [{update: 'slept on cold ground', date: '11/11/2022'}, {update: 'slept on hard concrete', date: '13/11/2022'}]
     }
   ]
 }
+
+The last projects director left one final task - the updates aren't displaying
+properly in the table when the webapp is launched:
+![](images/current.png)
+
 ```
 This is how that table should look:
-![Solution](solution1.png)
+![Solution](images/solution.png)
 A few interesting features here include that there can be multiple occurances to the same alert, and that the text for the date is styled and off to the edge of the table.
 
-You have 1 task, and 1 extension task:
+## Part 1
+Fill in the "occurances" column to render like in the screenshot. 
+Some traits to note about the solution:
+- There are multiple updates in each row.
+- To the right of each update is the date that update was entered (the `date` field), in a smaller font and a different colour.
 
-1. Fill in the "occurances" column to render like in the screenshot. Again, notice that you will need the date to be off to the side and a different font colour. After this, change the content rendered (line ~43) to fill in your github name in the "YOUR NAME" space in the bottom alert. You should then take a screenshot, add it as "submission.png" then commit your code.
-IMPORTANT: for this part, you must use CSS, and you must use flexboxes. Come up with a minimally invasive solution, which should not be more than 50 lines of code changed.
 
+You must:
+- Add updates to the table (`components/Table.tsx`), styled using CSS and flexboxes,
+  satisfying the traits listed above. You will need to edit both the `Table.module.css`
+  file and the `Table.tsx` file. (If you do not know how to use CSS modules, read
+  further for the section titled "CSS Modules").
+- Add updates in a **minimally invasive** way - you should not be making any major
+  changes to the types, the CSS file, or `index.tsx` for the base task.
+- Fill in the field containing `<YOUR NAME>` to your GitHub username.
 
-1. EXTENSION: modify the table to to add a way of adding a new alert, with no occurances. A stub component has been made called "AlertModal" which will render a modal when clicked, but does nothing with it. You should modify AlertModal to add a new occurance when filled.
+Once you have completed this, take a screenshot of your table and put it in `images/submission.png`
+(other image formats allowed).
+
+## Part 2
+
+> Skills: JavaScript, React
+
+EXTENSION: modify the table to to add a way of adding a new alert, with no occurances. A stub component has been made called "AlertModal" which will render a modal when clicked, but does nothing with it. You should modify AlertModal to add a new occurance when filled.
 
 
 # Getting set up
@@ -46,13 +92,41 @@ IMPORTANT: for this part, you must use CSS, and you must use flexboxes. Come up 
 2. run `npm install` to fetch dependencies.
 
 3. run the development server:
-
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+### CSS Modules
+
+This question uses something called **CSS modules** for `Table.module.css`. When you
+need to add new styles to the table, you will need to edit `Table.module.css` like so:
+
+1.  Add your style normally. For example, if we want to add a CSS class `foo`:
+
+    ```css
+    .foo {
+        /* insert styles here */
+    }
+    ```
+
+2.  Import the CSS module in your JavaScript/TypeScript file. This is already done
+    in the very first line of `Table.tsx`:
+
+    ```ts
+    import styles from './Table.module.css';
+    ```
+
+3.  Your custom styles can now be accessed as properties of `style` - so when you
+    need to access `.foo`, you can use `styles.foo` or `styles['foo']`:
+
+    ```tsx
+    <div className={styles.foo}>
+    ```
+
+> **NOTE**: if `styles.<your style name>` doesn't work, chances are you named your
+> style in such a way that it triggered a syntax error in JS/TS - to be extra safe,
+> you can use `styles['<your style name>']` to access that particular CSS class/ID.
