@@ -62,6 +62,7 @@ export default function Table() {
               {content.alertText}
             </div>
             <div className={styles.item}>
+              {/*TODO: add occurances*/}
             </div>
           </div>
         ))}
