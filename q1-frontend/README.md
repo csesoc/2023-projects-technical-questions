@@ -4,7 +4,7 @@
 # Question
 There is a table rendered in pages/index.tsx and this table is controlled by components/Table.tsx.
 
-This table contains a couple of alerts, and is structured using flexboxes. Have a look at the data it is trying to render:
+This table contains a couple of alerts, and is structured using flexboxes. Have a look at an example of the data it is trying to render:
 
 ```
 {
@@ -28,23 +28,24 @@ This table contains a couple of alerts, and is structured using flexboxes. Have 
   ]
 }
 ```
-The interesting problem here is that an alert can occur in multiple occurances. These should be displayed under the same alert. Our coder friend got pretty close to rendering this table using flexboxes, but doesn't know how to handle the multiple occurances dillema. So, they abandoned the project. Unfortunately, he was actually only ~5 lines of code and 10 lines of CSS away from a working solution! Show off to our coder friend by rendering something like the following:
-![Solution](solution.png)
-Notice that I can render both of the anomalies in the shelter alert. Also, the date is far off to the side.
+This is how that table should look:
+![Solution](solution1.png)
+A few interesting features here include that there can be multiple occurances to the same alert, and that the text for the date is styled and off to the edge of the table.
+
+You have 1 task, and 1 extension task:
+
+1. Fill in the "occurances" column to render like in the screenshot. Again, notice that you will need the date to be off to the side and a different font colour. After this, change the content rendered (line ~43) to fill in your github name in the "YOUR NAME" space in the bottom alert. You should then take a screenshot, add it as "submission.png" then commit your code.
+IMPORTANT: for this part, you must use CSS, and you must use flexboxes. Come up with a minimally invasive solution, which should not be more than 50 lines of code changed.
 
 
-Currently, your repo should not render anything under occurances. Your job is to fill it in like the screen above, and then to add your github name in the "YOUR NAME" field. You should then take a screenshot, add it as "submission.png" then commit your code.
+1. EXTENSION: modify the table to to add a way of adding a new alert, with no occurances. A stub component has been made called "AlertModal" which will render a modal when clicked, but does nothing with it. You should modify AlertModal to add a new occurance when filled.
 
 
-IMPORTANT: You must use CSS, and you must use flexboxes. Come up with a minimally invasive solution here, since you also want to teach our coder friend what to do, not do it for him.
+# Getting set up
+1.  you will need to install node/npm. This is best done using [nvm](https://github.com/nvm-sh/nvm). Run the bash script specified in the README of that repo to download nvm then use the command `nvm install --lts` to install the latest stable versions of npm/node. Run `node -v` to check success. The response should be something like 16.x.x or 18.x.x
+2. run `npm install` to fetch dependencies.
 
-# NextJS
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-First, run `npm install` to fetch dependencies.
-
-then, run the development server:
+3. run the development server:
 
 ```bash
 npm run dev
