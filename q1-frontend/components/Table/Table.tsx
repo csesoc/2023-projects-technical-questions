@@ -9,7 +9,7 @@ import styles from './Table.module.css';
 
 interface AlertOccurrance {
   date: string,
-  anomaly: string
+  update: string
 }
 
 interface Alert {
@@ -35,12 +35,12 @@ export default function Table() {
       {
         alert: 'water',
         status: 'low',
-        updates: [{anomaly: 'dropped to 10% below normal', date: '11/11/2022'}]
+        updates: [{update: 'dropped to 10% below normal', date: '11/11/2022'}]
       },
       {
         alert: 'shelter',
         status: 'terrible :(',
-        updates: [{anomaly: 'slept on cold ground', date: '11/11/2022'}, {anomaly: 'slept on hard concrete', date: '13/11/2022'}]
+        updates: [{update: 'slept on cold ground', date: '11/11/2022'}, {update: 'slept on hard concrete', date: '13/11/2022'}]
       },
       {
         alert: 'Done!',
