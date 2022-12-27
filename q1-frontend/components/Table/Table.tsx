@@ -54,7 +54,7 @@ export default function Table() {
           {contents.columnTitles.map((item) => <div className={styles.item} key={item}>{item}</div>)}
         </div>
         {contents.rowContents.map((content) => (
-          <div className={styles.row}>
+          <div data-testid='row' className={styles.row}>
             <div className={styles.item}>
               {content.alertType}
             </div>

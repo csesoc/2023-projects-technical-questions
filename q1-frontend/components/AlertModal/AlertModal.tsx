@@ -6,13 +6,18 @@ interface AlertModalProps {
 }
 
 export default function AlertModal({useContents}: AlertModalProps) {
-  const onSubmitEvent = (e: FormEvent<HTMLFormElement>) => {
+  function onSubmitEvent(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // hint: the alert given is at e.target[0].value - ignore typescript being annoyings
-    console.log((e.target as any)[0].value);
+    /*SOLUTION*/
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useContents((prevContents) => ({
+      columnTitles: prevContents.columnTitles,
+      rowContents: [...prevContents.rowContents, {alertType: (e.target as any).elements[0].value, alertText: '', alertOccurence: []}]
+    }))
+    /*SOLUTION*/
   }
   return (
-    <form onSubmit={onSubmitEvent}>
+    <form data-testid='form' onSubmit={onSubmitEvent}>
       <label> Add new Alert: </label>
       <input type='text' id='alert' name='alert' />
       <button type='submit'> Add </button>
