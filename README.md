@@ -16,10 +16,10 @@ will be a section that details which projects the question is relevant for.
 
 ## Submitting
 
-To submit your solution, make a fork of the `questions` branch of this repository
-and fill in your answers for each question according the the `README.md` of that
-question. There should be a place for you to upload your answers on the Projects
-subcom application - put the link to your forked repository there.
+To submit your solution, make a fork of the this repository and fill in your answers
+for each question according the the `README.md` of that question. There should be a
+place for you to upload your answers on the Projects subcom application - put the link
+to your forked repository there.
 
 ---
 
