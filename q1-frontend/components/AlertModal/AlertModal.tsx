@@ -11,6 +11,7 @@ export default function AlertModal({useContents}: AlertModalProps) {
     // hint: the alert given is at (e.target as any).elements[0].value - ignore typescript being annoying
     console.log((e.target as any)[0].value);
   }
+  
   return (
     <form data-testid='form' onSubmit={onSubmitEvent}>
       <label> Add new alert: </label>

@@ -68,6 +68,8 @@ Some traits to note about the solution:
 - To the right of each update is the date that update was entered (the `date` field),
   in a smaller font and a different colour.
 
+### Requirements
+
 You must:
 - Add updates to the table (`components/Table.tsx`), styled using CSS and flexboxes,
   satisfying the traits listed above. You will need to edit both the `Table.module.css`
@@ -84,24 +86,42 @@ Once you have completed this, take a screenshot of your table and put it in `ima
 
 > Skills: JavaScript, React
 
-EXTENSION: modify the table to to add a way of adding a new alert, with no updates.
-A stub component has been made called "AlertModal" which will render a modal when
-clicked, but does nothing with it. You should modify AlertModal to add a new update
-when filled.
+The previous project director was also partially done with making a way to **add
+new events**, through an input above the table. However, he couldn't get the
+functionality done in time, and as of now the "Add" button only logs the name of
+the alert to the console.
 
-# Getting set up
+Your task is to **implement the "Add" button** in `components/AlertModal.tsx` such
+that new events are updated and displayed. There should be a suite of tests available
+for you to test whether the button works as expected.
 
-1.  you will need to install node/npm. This is best done using [nvm](https://github.com/nvm-sh/nvm). Run the bash script specified in the README of that repo to download nvm then use the command `nvm install --lts` to install the latest stable versions of npm/node. Run `node -v` to check success. The response should be something like 16.x.x or 18.x.x
-2. run `npm install` to fetch dependencies.
+### Requirements
 
-3. run the development server:
-```bash
-npm run dev
-```
+- Implement functionality in `components/AlertModal.tsx` such that new alerts can
+  be added.
+- Make sure that all tests pass. You can check if tests pass by running `npm run test`.
+
+## Getting set up
+
+You will need to install node/npm. This is best done by using the [`nvm`](https://github.com/nvm-sh/nvm) tool.
+
+1. Install `nvm` according to the instructions in the link above.
+2. Use the command `nvm install --lts` to install the latest stable versions of npm/node.
+3. Run `node -v` to check that Node has been installed. The response should be
+   something like `16.x.x` or `18.x.x`.
+
+Once that's completed:
+
+4. Run `npm install` to fetch dependencies.
+5. Run the development server:
+    ```bash
+    npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates
+when you save the contents of any file.
 
 ### CSS Modules
 
