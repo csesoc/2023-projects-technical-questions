@@ -80,14 +80,17 @@ You must:
 Once you have completed this, take a screenshot of your table and put it in `images/submission.png`
 (other image formats are also allowed).
 
-## Part 2
+## EXTENSION: Part 2
 
 > Skills: JavaScript, React
 
-EXTENSION: modify the table to to add a way of adding a new alert, with no updates.
-A stub component has been made called "AlertModal" which will render a modal when
-clicked, but does nothing with it. You should modify AlertModal to add a new update
-when filled.
+modify the page to to add a way of adding a new alert, with no updates. This means that you will add a new "Alert", with no statuses or updates to it.
+This will be done by completing the "Add new alert" form on the screen.
+A stub component has been made called "AlertModal" which renders a form and a button, but this button does nothing when
+clicked. You should modify AlertModal to add a new Alert when filled. 
+
+
+**There are tests** in `components/Table/Table.test.tsx`, make sure they pass to successfully complete part 2.
 
 # Getting set up
 
