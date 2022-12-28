@@ -14,16 +14,18 @@ feel would best reflect the projects you want to join (i.e. if you want to work 
 frontend, do the frontend question). At the top of each technical question, there
 will be a section that details which projects the question is relevant for.
 
-## Setting up
+## Submitting
 
-Some questions will need setup before they can run properly. This should be written
-in the `README.md` of each question. If you have any questions, feel free to contact:
+To submit your solution, make a fork of the `questions` branch of this repository
+and fill in your answers for each question according the the `README.md` of that
+question. There should be a place for you to upload your answers on the Projects
+subcom application - put the link to your forked repository there.
+
+---
+
+If you have any questions, feel free to contact:
 
 - `development@csesoc.org.au` via email
 - Hanyuan (hanyuone#0001) or Angella (Angella#2408) on Discord
-
-## Submitting
-
-> TODO once I figure out what `solutions` branch is for
 
 **Good luck, and happy coding!**
