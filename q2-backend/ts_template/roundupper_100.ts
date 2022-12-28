@@ -19,8 +19,8 @@ type spaceEntity =
 const spaceDatabase = [] as spaceEntity[];
 const app = express();
 
-// the createEntity endpoint adds an entity to your global space database
-app.post('/createEntity', (req, res) => {
+// the POST /entity endpoint adds an entity to your global space database
+app.post('/entity', (req, res) => {
     // TODO: fill me in
 });
 
