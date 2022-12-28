@@ -82,7 +82,7 @@ You must:
 Once you have completed this, take a screenshot of your table and put it in `images/submission.png`
 (other image formats are also allowed).
 
-## Part 2
+## EXTENSION: Part 2
 
 > Skills: JavaScript, React
 
