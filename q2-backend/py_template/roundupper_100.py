@@ -34,17 +34,17 @@ class SpaceEntity:
 app = Flask(__name__)
 space_database: List[SpaceEntity] = []
 
-# the createEntity endpoint adds an entity to your global space database
-@app.route('/createEntity', methods=['POST'])
+# the POST /entity endpoint adds an entity to your global space database
+@app.route('/entity', methods=['POST'])
 def create_entity():
     # TODO: implement me
-    pass
+    ...
 
 # lasooable returns all the space animals a space cowboy can lasso given their name
 @app.route('/lassoable', methods=['GET'])
 def lassoable():
     # TODO: implement me
-    pass
+    ...
 
 
 # DO NOT TOUCH ME, thanks :D
