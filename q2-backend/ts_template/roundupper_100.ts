@@ -4,7 +4,7 @@ import express from 'express';
 // spaceCowboy models a cowboy in our super amazing system
 // spaceAnimal models a single animal in our amazing system
 type location = { x: number, y: number };
-type spaceCowboy = { name: string, lassoSize: number };
+type spaceCowboy = { name: string, lassoLength: number };
 type spaceAnimal = { type: "pig" | "cow" | "flying_burger" };
 
 // spaceEntity models an entity in the super amazing (ROUND UPPER 100) system

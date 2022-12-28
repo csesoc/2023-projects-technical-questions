@@ -7,7 +7,7 @@ from flask import Flask, request
 @dataclass
 class SpaceCowboy:
     name: str
-    lassoSize: int
+    lassoLength: int
 
 # SpaceAnimal models a single animal in our amazing system
 @dataclass
@@ -42,7 +42,7 @@ def create_entity():
 
 # lasooable returns all the space animals a space cowboy can lasso given their name
 @app.route('/lassoable', methods=['GET'])
-def lassooable():
+def lassoable():
     # TODO: implement me
     pass
 
