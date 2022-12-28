@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "ts-node roundupper_100.ts" 
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.17",
+    "ts-node": "^10.9.1"
+  }
+}

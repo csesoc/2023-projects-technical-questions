@@ -1,0 +1,20 @@
+.myTable {
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    font-family: arial, sans-serif;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.item {
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: column;
+}
