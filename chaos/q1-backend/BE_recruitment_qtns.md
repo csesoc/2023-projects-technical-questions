@@ -32,4 +32,5 @@
     - Birthdate
     - Sex
 
-    Write a Rust program to find the course which has the highest average student WAM. **Include this program in your repo**.
+    Write a Rust program to find the course which has the highest average student WAM. **Write your program in the cargo project q3**.
+
