@@ -1,4 +1,4 @@
-> These questions are relevant for **Chaos**.
+> These questions are relevant for the **Chaos backend team**.
 
 # Chaos Technical Questions
 
