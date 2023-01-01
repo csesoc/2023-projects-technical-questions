@@ -1,4 +1,4 @@
-> These questions are relevant specifically for Chaos
+> These questions are relevant for **Chaos**.
 
 # Chaos Technical Questions
 
