@@ -50,7 +50,7 @@ The program had some mechanism for creating and adding new entities to the syste
         {
             "type": "space_animal",
             "metadata": {
-                "type": "flying_burger",
+                "type": "flying_burger"
             },
             "location": {
                 "x": 7,
