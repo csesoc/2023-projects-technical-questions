@@ -91,13 +91,13 @@ new events**, through an input above the table. However, he couldn't get the
 functionality done in time, and as of now the "Add" button only logs the name of
 the alert to the console.
 
-Your task is to **implement the "Add" button** in `components/AlertModal.tsx` such
+Your task is to **implement the "Add" button** in `components/AlertModal/AlertModal.tsx` such
 that new events are updated and displayed. There should be a suite of tests available
 for you to test whether the button works as expected.
 
 ### Requirements
 
-- Implement functionality in `components/AlertModal.tsx` such that new alerts can
+- Implement functionality in `components/AlertModal/AlertModal.tsx` such that new alerts can
   be added.
 - Make sure that all tests pass. You can check if tests pass by running `npm run test`.
 

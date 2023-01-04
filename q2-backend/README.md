@@ -29,7 +29,7 @@ The program had some mechanism for creating and adding new entities to the syste
             "type": "space_cowboy",
             "metadata": {
                 "name": "Jim",
-                "lassoSize": 1 
+                "lassoLength": 1 
             },
             "location": {
                 "x": 3,
@@ -40,7 +40,7 @@ The program had some mechanism for creating and adding new entities to the syste
             "type": "space_cowboy",
             "metadata": {
                 "name": "Bob",
-                "lassoSize": 2 
+                "lassoLength": 2 
             },
             "location": {
                 "x": 7,
