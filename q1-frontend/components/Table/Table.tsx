@@ -45,7 +45,7 @@ export default function Table() {
       },
       {
         alert: 'Done!',
-        status: '<YOUR NAME>',
+        status: 'jeremyle56',
         updates: []
       }
     ]
@@ -57,6 +57,7 @@ export default function Table() {
       <div className={styles.myTable}>
         <div className={styles.row}>
           {contents.columnTitles.map((item) => <div className={styles.item} key={item}>{item}</div>)}
+          <div className={styles.date}></div>
         </div>
         {contents.rowContents.map((content) => (
           <div data-testid='row' className={styles.row}>
@@ -67,7 +68,18 @@ export default function Table() {
               {content.status}
             </div>
             <div className={styles.item}>
-              {/* TODO: add updates */}
+              {content.updates.map((update) => (
+                <div>
+                  {update.update}
+                </div>
+              ))}
+            </div>
+            <div className={styles.date}>
+              {content.updates.map((update) => (
+                <div>
+                  {update.date}
+                </div>
+              ))}
             </div>
           </div>
         ))}
@@ -75,3 +87,17 @@ export default function Table() {
     </>
   )
 }
+
+
+// <div>
+// {content.updates.map((update) => (
+//   <div className={styles.updates}>
+//     <div>
+//       {update.update}
+//     </div>
+//     <div className={styles.dates}>
+//       {update.date}
+//     </div>
+//   </div>
+// ))}
+// </div>

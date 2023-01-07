@@ -18,3 +18,29 @@
     flex: 1 1 0px;
     flex-direction: column;
 }
+
+.date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50px;
+    flex-shrink: 0;
+    color: blue;
+    font-size: x-small;
+}
+
+/* .updates {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dates {
+    color: blue;
+    font-size: x-small;
+}
+
+.update {
+    color: black;
+} */
