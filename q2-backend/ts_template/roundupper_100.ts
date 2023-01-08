@@ -28,15 +28,23 @@ app.use(express.json());
 
 // the POST /entity endpoint adds an entity to your global space database
 app.post('/entity', (req, res) => {
-    const { entities } = req.body;
-    spaceDatabase.push(...entities);
-    res.json();
+    try {
+        const { entities } = req.body;
+        spaceDatabase.push(...entities);
+        res.json();
+    } catch (error) {
+        res.status(400).send('Invalid input');
+    }
 });
 
 // lasooable returns all the space animals a space cowboy can lasso given their name
 app.get('/lassoable', (req, res) => {
-    const cowboyName = req.query.cowboy_name as string;
-    res.json(getLassoable(cowboyName));
+    try {
+        const cowboyName = req.query.cowboy_name as string;
+        res.json(getLassoable(cowboyName));
+    } catch (error) {
+        res.status(400).send('Entity input was invalid');
+    }
 });
 
 // Helper function to find all space animals within lasso range
