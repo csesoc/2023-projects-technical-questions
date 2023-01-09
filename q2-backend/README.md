@@ -140,3 +140,29 @@ Unfortunately, unlike the first part, the type definition for the input/output m
  - The endpoint should be able to parse the input format described above.
  - The endpoint should return all space animals in the system where the Pythagorean distance between the cowboy in the request and the animal is **less than or equal to** the cowboy's lasso length.
  - The endpoint should return a HTTP 200 with an output of the same format described above.
+
+## Getting set up
+
+### Python
+
+A basic Flask application has been set up for you in `py_template/roundupper_100.py`,
+including some endpoints. To run it, enter `python roundupper.py` in the Python
+folder, and a Flask server should be spun up on port 8080.
+
+### TypeScript
+
+A basic Express application has been set up for you in `ts_template/roundupper_100.ts`,
+including some endpoints. To run it, enter `npm run start` in the TypeScript folder,
+and an Express server should be spun up on port 8080.
+
+### Testing
+
+We have written some tests for you inside the `autotester` folder, which contains
+a suite written in TypeScript. To use these tests on your code:
+
+1. Make sure your backend server is up and running by following the instructions
+   above for Python/TypeScript.
+2. Go into the `autotester` folder and run `npm run jest`.
+
+The autotester should then show which tests have passed and which have failed. If
+you know Jest, feel free to write more tests!
