@@ -10,6 +10,12 @@ type SpaceEntity =
 
 describe("Part 1", () => {
   describe("POST /entity", () => {
+    const createEntities = async (entities: SpaceEntity[]) => {
+      return await request("http://localhost:8080")
+        .post("/entity")
+        .send({ entities });
+    };
+
     it("creates new entities", async () => {
       const entities: SpaceEntity[] = [
         {
@@ -23,9 +29,7 @@ describe("Part 1", () => {
           location: { x: 3, y: 4 },
         },
       ];
-      const response = await request("http://localhost:8080")
-        .post("/entity")
-        .send({ entities });
+      const response = await createEntities(entities);
       expect(response.status).toBe(200);
       expect(response.body).toEqual({ message: "Entities created" });
     });
@@ -43,9 +47,7 @@ describe("Part 1", () => {
           location: { x: 100, y: 2 },
         },
       ];
-      const response = await request("http://localhost:8080")
-        .post("/entity")
-        .send({ entities });
+      const response = await createEntities(entities);
       expect(response.status).toBe(200);
       expect(response.body).toEqual({ message: "Entities created" });
     });
@@ -63,9 +65,7 @@ describe("Part 1", () => {
           location: { x: 3, y: 4 },
         },
       ];
-      const response = await request("http://localhost:8080")
-        .post("/entity")
-        .send({ entities });
+      const response = await createEntities(entities);
       expect(response.status).toBe(200);
       expect(response.body).toEqual({ message: "Entities created" });
     });
