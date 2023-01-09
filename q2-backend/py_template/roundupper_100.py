@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Union, NamedTuple, List
-from flask import Flask, request
+from flask import Flask, request, Response
 
 # SpaceCowboy models a cowboy in our super amazing system
 @dataclass
@@ -37,8 +37,18 @@ space_database: List[SpaceEntity] = []
 # the POST /entity endpoint adds an entity to your global space database
 @app.route('/entity', methods=['POST'])
 def create_entity():
-    # TODO: implement me
-    ...
+    entities = request.get_json()['entities']
+    for entity in entities:
+        metadata = entity['metadata']
+        coordinate = entity['location']
+        # Condition whether entity is space cowboy or animal
+        if entity['type'] == 'space_cowboy':
+            data = SpaceCowboy(metadata['name'], metadata['lassoLength'])
+        else:
+            data = SpaceAnimal(metadata['type'])
+        location = SpaceEntity.Location(coordinate['x'], coordinate['y'])
+        space_database.append(SpaceEntity(data, location))
+    return Response(status=200)
 
 # lasooable returns all the space animals a space cowboy can lasso given their name
 @app.route('/lassoable', methods=['GET'])
