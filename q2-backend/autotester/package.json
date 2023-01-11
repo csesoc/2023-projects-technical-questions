@@ -2,7 +2,8 @@
   "name": "autotester",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test_part1": "jest -t 'Part 1'",
+    "test_part2": "jest -t 'Part 2'"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

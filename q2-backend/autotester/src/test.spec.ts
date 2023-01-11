@@ -102,7 +102,50 @@ describe("Part 2", () => {
       location: { x: 3, y: 5 },
     },
   ];
+
+  const getLassoable = async (name: string) => {
+    return await request("http://localhost:8080")
+      .get("/lassoable")
+      .send({ "cowboy_name": name });
+  };
+
+  beforeAll(async () => {
+    await request("http://localhost:8080")
+      .post("/entity")
+      .send({ entities: mockData });
+  }); 
+
   describe("GET /lassoable", () => {
-    it("shoi", () => {});
+    it("should calculate the right distances for Buckaroo Banzai", async () => {
+      const expected = [
+        {
+          type: "pig",
+          location: { x: 4, y: 2 }
+        },
+        {
+          type: "cow",
+          location: { x: 3, y: 3 }
+        }
+      ];
+
+      const response = await getLassoable("Buckaroo Banzai");
+
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual(expected);
+    });
+
+    it("should calculate the right distances for Eliot Ness", async () => {
+      const expected = [
+        {
+          type: "flying_burger",
+          location: { x: 3, y: 5 }
+        }
+      ];
+
+      const response = await getLassoable("Eliot Ness");
+
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual(expected);
+    });
   });
 });
