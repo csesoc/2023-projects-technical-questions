@@ -164,9 +164,9 @@ a suite written in TypeScript. To use these tests on your code:
 
 1. Make sure your backend server is up and running by following the instructions
    above for Python/TypeScript.
-2. Go into the `autotester` folder and run `npm run part1`.
+2. Go into the `autotester` folder and run `npm run test_part1`.
 3. For Part 2, you will need to restart the server (since the server put in some
-   dummy data), and then re-run `npm run part2`.
+   dummy data), and then re-run `npm run test_part2`.
 
 The autotester should then show which tests have passed and which have failed. If
 you know Jest, feel free to write more tests!
