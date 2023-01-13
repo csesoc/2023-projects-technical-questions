@@ -1,17 +1,16 @@
-import express from 'express';
+import express from "express";
 
 // location is the simple (x, y) coordinates of an entity within the system
 // spaceCowboy models a cowboy in our super amazing system
 // spaceAnimal models a single animal in our amazing system
-type location = { x: number, y: number };
-type spaceCowboy = { name: string, lassoLength: number };
+type location = { x: number; y: number };
+type spaceCowboy = { name: string; lassoLength: number };
 type spaceAnimal = { type: "pig" | "cow" | "flying_burger" };
 
 // spaceEntity models an entity in the super amazing (ROUND UPPER 100) system
 type spaceEntity =
-    | { type: "space_cowboy", metadata: spaceCowboy, location: location }
-    | { type: "space_animal", metadata: spaceAnimal, location: location };
-
+  | { type: "space_cowboy"; metadata: spaceCowboy; location: location }
+  | { type: "space_animal"; metadata: spaceAnimal; location: location };
 
 // === ADD YOUR CODE BELOW :D ===
 type entityCowboy = { type: "space_cowboy", metadata: spaceCowboy, location: location };
