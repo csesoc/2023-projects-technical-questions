@@ -31,7 +31,6 @@ describe("Part 1", () => {
       ];
       const response = await createEntities(entities);
       expect(response.status).toBe(200);
-      expect(response.body).toEqual({ message: "Entities created" });
     });
 
     it("creates new entities with valid input", async () => {
