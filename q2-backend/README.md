@@ -160,10 +160,11 @@ and an Express server should be spun up on port 8080.
 We have written some tests for you inside the `autotester` folder, which contains
 a suite written in TypeScript. To use these tests on your code:
 
-1. Make sure your backend server is up and running by following the instructions
+1. Run `npm install` to download all modules necessary for the tests to run.
+2. Make sure your backend server is up and running by following the instructions
    above for Python/TypeScript.
-2. Go into the `autotester` folder and run `npm run test_part1`.
-3. For Part 2, you will need to restart the server (since the server put in some
+3. Go into the `autotester` folder and run `npm run test_part1`.
+4. For Part 2, you will need to restart the server (since the server put in some
    dummy data), and then re-run `npm run test_part2`.
 
 The autotester should then show which tests have passed and which have failed. If
