@@ -106,12 +106,10 @@ There are two template folders (python and typescript) each of them with a stub 
 
 The second part of the program is the ability to query which space animals a certain space cowboy can capture with a single swoop of their lasso. Like the previous part, Rick interfaces with this feature via a HTTP endpoint `/lassoable`. The endpoint takes the name of a cowboy that Rick wishes to query and returns a list of all the space animals that the cowboy can lasso.
 
-An animal is lassoable if their distance from the cowboy in question is **less than or equal to the length of the cowboy's lasso**. The endpoint input looks something like:
+An animal is lassoable if their distance from the cowboy in question is **less than or equal to the length of the cowboy's lasso**. `/lassoable` takes in one query argument, the cowboy's name itself:
 
-```json
-{
-  "cowboy_name": "rick"
-}
+```
+/lassoable?cowboy_name=<insert name here>
 ```
 
 Unfortunately, unlike the first part, the type definition for the input/output model of this endpoint was corrupted so it is up to you to add that to the program. After processing the request, your endpoint should return `HTTP 200` with a **list of ALL space animals** it can capture, and the output should follow the following example format:

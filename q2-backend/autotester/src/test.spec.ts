@@ -103,7 +103,7 @@ describe("Part 2", () => {
   const getLassoable = async (name: string) => {
     return await request("http://localhost:8080")
       .get("/lassoable")
-      .send({ cowboy_name: name });
+      .query({ cowboy_name: name });
   };
 
   beforeAll(async () => {

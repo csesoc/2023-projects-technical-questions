@@ -23,7 +23,7 @@ app.post("/entity", (req, res) => {
   // TODO: fill me in
 });
 
-// lasooable returns all the space animals a space cowboy can lasso given their name
+// /lassoable returns all the space animals a space cowboy can lasso given their name
 app.get("/lassoable", (req, res) => {
   // TODO: fill me in
 });
