@@ -3,6 +3,7 @@ from enum import Enum
 from typing import Union, NamedTuple, List
 from flask import Flask, request
 from error import InvalidType, InvalidName
+from math import sqrt, pow
 
 # SpaceCowboy models a cowboy in our super amazing system
 @dataclass
@@ -55,8 +56,35 @@ def create_entity():
 # lasooable returns all the space animals a space cowboy can lasso given their name
 @app.route('/lassoable', methods=['GET'])
 def lassoable():
-    name = request.get_json()['cowboy_name']
+    canLasso = []
+    name = request.get_json()['cowboy_name'][0]
+    cowboy = getCowboy(name)
+    for animal in space_database:
+        if type(animal.metadata) == SpaceAnimal and inRange(cowboy, animal):
+            canLasso.append({
+                'type': animal.metadata.type,
+                'location': {
+                    'x': animal.location.x,
+                    'y': animal.location.y
+                }
+            })
+    return {"space_animals": canLasso}
 
+# Helper Functions
+def PythagoreanDistance(locA, locB):
+    return sqrt(pow(locA.x - locB.x, 2) + pow(locA.y - locB.y, 2))
+
+def inRange(cowboy, animal):
+    lasso = cowboy.metadata.lassoLength
+    return lasso >= PythagoreanDistance(cowboy.location, animal.location)
+
+def getCowboy(name):
+    for entity in space_database:
+        if type(entity.metadata) == SpaceCowboy and entity.metadata.name == name:
+            return entity
+        else:
+            raise InvalidName
+    
 
 # DO NOT TOUCH ME, thanks :D
 if __name__ == '__main__':
