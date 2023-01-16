@@ -133,6 +133,12 @@ describe("Part 2", () => {
       });
     });
 
+    // it.only("Error case: non-existent cowboy", async () => {
+    //   // const response = await ;
+    //   // expect(response.status).toBe(500);
+    //   expect(() => getLassoable("Buckaroo's imaginary brother")).toThrow("Cowboy couldn't be found");
+    // });
+
     it("should calculate the right distances for Eliot Ness", async () => {
       const expected = [
         {
